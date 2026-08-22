@@ -458,7 +458,7 @@
                         Each ROUTE/ROUTE6 object specifies that a given prefix may be announced by a given origin ASN,
                         and multiple ROUTE/ROUTE6 objects may map one prefix to multiple origin ASNs.
                         The semantics of a ROUTE/ROUTE6 object are those of an exact prefix match.
-                        ROUTE/ROUTE6 objects may cover other ROUTE/ROUTE6 objects for more specific subprefixes as well as be covered by ROUTE/ROUTE6 objects for less specific superprefixes.
+                        ROUTE/ROUTE6 objects for related prefixes (more-specific subprefixes or less-specific superprefixes) may coexist; each object still applies only to its exact prefix.
                     </t>
                     <t>
                         Operators <bcp14>SHOULD</bcp14> create ROUTE/ROUTE6 objects for all prefixes they originate or plan to originate.
