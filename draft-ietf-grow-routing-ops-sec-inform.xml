@@ -454,9 +454,11 @@
                     <name>Route Objects</name>
                     <t>
                         The corner stone of IRR based information are ROUTE (IPv4) and ROUTE6 (IPv6) objects.
-                        These document, for a given prefix, the AS/ASes allowed to originate the prefix.
-                        Note that for a given prefix also more specific objects may exist.
-                        However, technically, the semantic of a ROUTE/ROUTE6 object is that of an exact match.
+                        IRRs store ROUTE (IPv4) and ROUTE6 (IPv6) objects.
+                        Each ROUTE/ROUTE6 object specifies that a given prefix may be announced by a given origin ASN,
+                        and multiple ROUTE/ROUTE6 objects may map one prefix to multiple origin ASNs.
+                        The semantics of a ROUTE/ROUTE6 object are those of an exact prefix match.
+                        ROUTE/ROUTE6 objects may cover other ROUTE/ROUTE6 objects for more specific subprefixes as well as be covered by ROUTE/ROUTE6 objects for less specific superprefixes.
                     </t>
                     <t>
                         Operators <bcp14>SHOULD</bcp14> create ROUTE/ROUTE6 objects for all prefixes they originate or plan to originate.
