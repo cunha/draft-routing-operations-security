@@ -459,7 +459,7 @@
                         However, technically, the semantic of a ROUTE/ROUTE6 object is that of an exact match.
                     </t>
                     <t>
-                        Operators <bcp14>SHOULD</bcp14> create ROUTE/ROUTE6 objects for all prefixes they do or do plan to originate.
+                        Operators <bcp14>SHOULD</bcp14> create ROUTE/ROUTE6 objects for all prefixes they originate or plan to originate.
                     </t>
                 </section>
 
@@ -489,14 +489,14 @@
                 <section  anchor="sec-prefix-filters-created-from-internet-routing-registries-irrs-creating-filters">
                     <name>Recursively Computing Filters</name>
                     <t>
-                        Using AS-SETs and ROUTE/ROUTE6 objects, it is possible to use the IRR information to build, for a given neighbor AS, a list of prefixes the neighbor is authorized to originated or transited.
+                        Using AS-SETs and ROUTE/ROUTE6 objects, it is possible to use the IRR information to build, for a given neighbor AS, a list of prefixes the neighbor is authorized to originate or transit <xref target="RFC2622" format="default" section="5.3"/>.
                         This can be done relatively easily using scripts and existing tools capable of retrieving this information from the registries.
                         This approach is exactly the same for both IPv4 and IPv6.
                     </t>
                     <t>
                         The macro-algorithm for the script is as follows.
                         For the neighbor that is considered, the distant operator has provided the AS and may be able to provide a hierarchically named AS-SET object (aka AS-MACRO).
-                        With these two mechanisms, a script can build, for a given neighbor, that lists allowed prefixes and the AS number from which they should be originated.
+                        With these two mechanisms, a script can build a filter for a given neighbor that lists allowed prefixes and the AS number from which they should be originated.
                         One could decide not to use the origin information and only build monolithic prefix filters from fetched data combining prefixes a neighbor is authorized to transit and originate.
                     </t>
                     <t>
@@ -1854,6 +1854,7 @@
                 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.1191.xml"/>
                 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.1918.xml"/>
                 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.1997.xml"/>
+                <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2622.xml"/>
                 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.2827.xml"/>
                 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3345.xml"/>
                 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.3704.xml"/>
